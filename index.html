@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>dorfcode – Website im Aufbau</title>
+  <meta name="description" content="dorfcode.com – diese Website befindet sich im Aufbau.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      --bg: #f6f5f1;
+      --fg: #1d2b24;
+      --muted: #5b6b62;
+      --accent: #2f7d4f;
+      --card: #ffffff;
+      --border: #dfe3dc;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121815;
+        --fg: #e8eee9;
+        --muted: #9aaba1;
+        --accent: #5fc286;
+        --card: #1a221e;
+        --border: #2a3530;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      line-height: 1.6;
+    }
+    main {
+      width: 100%;
+      max-width: 560px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px 32px;
+      text-align: center;
+    }
+    .logo {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: clamp(1.8rem, 6vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 8px;
+    }
+    .logo span { color: var(--accent); }
+    .badge {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: 999px;
+      padding: 2px 12px;
+      margin-bottom: 24px;
+    }
+    p { margin: 0 0 12px; color: var(--muted); }
+    .cursor {
+      display: inline-block;
+      width: 0.6ch;
+      background: var(--accent);
+      animation: blink 1.1s steps(1) infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
+    footer { margin-top: 24px; font-size: 0.85rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1 class="logo">&lt;dorf<span>code</span>/&gt;<span class="cursor" aria-hidden="true">&nbsp;</span></h1>
+    <div class="badge">Im Aufbau</div>
+    <p>Hier entsteht die neue Website von <strong>dorfcode</strong>.</p>
+    <p>Schau bald wieder vorbei – es lohnt sich.</p>
+  </main>
+  <footer>&copy; <span id="year">2026</span> dorfcode.com</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
